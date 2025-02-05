@@ -22,7 +22,10 @@ Requisitos:
 # Sua solução aqui
 
 
-def nome_e_tamanho(string):
+def nome_e_tamanho(string: str) -> dict:
+    '''
+    Transforma string em lowercase e em um dict
+    '''
     counter = 0
     nomes = string.lower().split(',')
     obj = {}
@@ -37,7 +40,10 @@ def nome_e_tamanho(string):
 
 array_nomes = nome_e_tamanho('ANA, JOAO, CARLOS, LUSCASVINICIUS')
 
-def lista(arr):
+def lista(arr: list) -> list:
+    '''
+    Converte a lista em um array de objetos
+    '''
     obj235 = []
     for nome, tamanho in arr.items():
         nome = nome.strip()
@@ -50,8 +56,10 @@ def lista(arr):
 
 lista_var = lista(array_nomes)
 
-
-def percorrer_lista(lista):
+def percorrer_lista(lista: list) -> None:
+    '''
+    Percorre a lista e a exibi no prompt
+    '''
     for i in lista:
         print(i['__str__'])
 
